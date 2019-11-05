@@ -48,6 +48,27 @@ class TaskController
             task: task
         })
     }
+
+    async edit({ params, view })
+    {
+        const task = await Task.find(params.id)
+
+        return view.render('edit', {
+            task: task
+        })
+    }
+
+    async update({ request, params, response, session })
+    {
+        const task = await Task.findOrFail(params.id)
+        const data = request.only(['title', 'body'])
+        task.merge(data)
+        await task.save()
+        session.flash({ notification: 'Task edited'})
+        
+        return response.redirect('/tasks')
+    }
+
     async destroy({params, response, session })
     {
         const task = await Task.find(params.id)

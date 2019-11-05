@@ -9,6 +9,8 @@ Route.on('/add').render('add')
 Route.post('/add', 'TaskController.store')
 Route.get('/task/:id', 'TaskController.detail')
 Route.get('delete/:id', 'TaskController.destroy')
+Route.get('/edit/:id', 'TaskController.edit')
+Route.post('/update/:id', 'TaskController.update')
 // Route.get('/test', () => 'Hello World')
 // Route.get('/test/:id', function({params}) {
 //     return `this is the id ${params.id}`

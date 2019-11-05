@@ -1,5 +1,5 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "todolist",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
   "description": "The fullstack application boilerplate for Adonisjs",
@@ -12,7 +12,10 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "",
+  "engines": {
+    "node": "8.5.0"
+  },
+  "author": "Paloma Monteiro",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -32,5 +35,13 @@
   "devDependencies": {},
   "autoload": {
     "App": "./app"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pa-monteiro/todolist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pa-monteiro/todolist/issues"
+  },
+  "homepage": "https://github.com/pa-monteiro/todolist#readme"
 }
